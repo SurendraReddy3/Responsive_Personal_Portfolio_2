@@ -188,7 +188,7 @@ header {
 }
 
 .contact-info p {
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -208,7 +208,7 @@ header {
     margin-top: 20px;
     position: relative;
     display: flex;
-    gap: 25px;
+    gap: 35px;
 }
 
 .social-icons a {
