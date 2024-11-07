@@ -1,5 +1,5 @@
 body {
-    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@ svg {
 
 /* Header Styling */
 header {
-    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,7 +106,7 @@ header {
 }
 
 .certifications-section {
-    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
     text-align: center;
     padding: 20px;
 }
@@ -192,7 +192,7 @@ header {
 
 /* Footer */
 footer {
-    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
     color: white;
     text-align: center;
     padding: 0px 0;
