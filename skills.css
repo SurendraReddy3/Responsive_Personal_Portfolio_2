@@ -1,5 +1,5 @@
 body {
-    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@ h2, h3, h4 {
 
 /* Header Styling */
 header {
-    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,7 +99,7 @@ header {
 
 /* Skills Section and Footer styles unchanged */
 .skills-section {
-    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
     padding: 2vh; /* Relative padding */
     text-align: center;
     flex: 1; /* Allow the section to expand and take up available space */
@@ -196,7 +196,7 @@ header {
 
 /* Footer Styling */
 footer {
-    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
     background-color: #050000; /* Darker background for contrast */
     color: white;
     text-align: center; /* Center text */
