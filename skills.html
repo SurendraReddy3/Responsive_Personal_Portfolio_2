@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+</head>
+<body>
+    <svg width="0" height="0">
+        <filter id="gooey">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 
+                                                               0 1 0 0 0 
+                                                               0 0 1 0 0 
+                                                               0 0 0 18 -7" 
+                           result="gooey" />
+            <feBlend in="SourceGraphic" in2="gooey" operator="over" />
+        </filter>
+    </svg>
+    <div class="grid-background"></div>
+    <header>
+        <div class="title">
+            <h1>PORTFO<span style="color: white;" class="neon">LIO</span></h1>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html" class="link-button">HOME</a>
+                <a href="about.html" class="link-button">ABOUT</a>
+                <a href="skills.html" class="link-button active">SKILLS</a>
+                <a href="projects.html" class="link-button">PROJECTS</a>
+                <a href="certifications.html" class="link-button">CERTIFICATIONS</a>
+                <a href="contact.html" class="link-button">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="skills-section">
+        <h2>SKILLS</h2>
+        <div class="skill-category">
+            <h3>Front End</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-html5 fa-3x"></i> <!-- Font Awesome Icon -->
+                    <h4>HTML</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt fa-3x"></i> <!-- Font Awesome Icon -->
+                    <h4>CSS</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js-square fa-3x"></i> <!-- Font Awesome Icon -->
+                    <h4>JavaScript</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react fa-3x"></i> <!-- Font Awesome Icon -->
+                    <h4>React (Ongoing Learning)</h4>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skill-category">
+            <h3>Back End</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-python fa-3x"></i> <!-- Font Awesome Icon -->
+                    <h4>Python (OOPs Concepts)</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-cogs fa-3x"></i> <!-- Django Generic Icon -->
+                    <h4>Django</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-flask fa-3x"></i> <!-- Flask Icon -->
+                    <h4>Flask</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database fa-3x"></i> <!-- SQL Icon -->
+                    <h4>SQL</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>Additional Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-github fa-3x"></i> <!-- GitHub Icon -->
+                    <h4>GitHub</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-aws fa-3x"></i> <!-- AWS Icon -->
+                    <h4>AWS (Cloud)</h4>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-brain fa-3x"></i> <!-- Machine Learning Icon -->
+                    <h4>Machine Learning (Basic)</h4>
+                </div>
+            </div>
+
+                
+        </div>
+
+        <script>
+            const gooeyCursor = document.createElement("div");
+            gooeyCursor.className = "gooey-cursor";
+            document.body.appendChild(gooeyCursor);
+    
+            document.addEventListener("mousemove", (e) => {
+                gooeyCursor.style.transform = `translate3d(${e.clientX - 25}px, ${e.clientY - 25}px, 0)`; 
+            });
+    
+            // Optional: Add a scale effect on hover
+            document.querySelectorAll('.link-button').forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    gooeyCursor.style.transform += ' scale(1.5)'; // Increase size on hover
+                });
+                button.addEventListener('mouseleave', () => {
+                    gooeyCursor.style.transform += ' scale(2)'; // Reset size
+                });
+            });
+        </script> 
+
+        
+    </section>
+    <footer>
+        <p>&copy; 2024 Surendra Reddy Gandra. All rights reserved.</p>
+    </footer>
+</body>
+</html>

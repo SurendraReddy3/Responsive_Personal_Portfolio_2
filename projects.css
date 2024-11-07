@@ -1,0 +1,547 @@
+body {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh; /* Ensure body always covers at least the viewport height */
+    display: flex;
+    flex-direction: column;
+    color: snow;
+    cursor: default;
+    padding: 0;
+    overflow-x: hidden;
+}
+.gooey-cursor {
+    position: fixed;
+    width: 3vw;
+    height: 3vw;
+    background-color: #4b9c4b;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s ease;
+    filter: url(#gooey);
+    transform: scale(1);
+    z-index: 9999;
+}
+
+.gooey:hover {
+    transform: scale(1.5);
+}
+
+svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Styling */
+header {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2%; /* Keep header padding */
+    position: sticky; /* Keep it in normal flow */
+    z-index: 1000; /* Ensure it stays above other content */
+    top: 0;
+}
+
+.title h1 {
+    font-size: 3em;
+    color: #4b9c4b;
+    margin: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.link-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+}
+
+.link-button.active {
+    color: #4b9c4b; /* Set active link color to red */
+    font-weight: bold;
+}
+
+.link-button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px; /* Larger height to prevent mouse from slipping under */
+    bottom: -5px; /* Positioned slightly below the text */
+    left: 0;
+    background-color: #4b9c4b;
+    opacity: 0; /* Initially hidden */
+    transform: scaleX(0); /* Start with the line scaled down */
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.link-button:hover::before {
+    opacity: 1; /* Make the underline visible on hover */
+    transform: scaleX(1); /* Expand the line */
+}
+
+.link-button:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.projects-section {
+    flex: 1;
+    padding: 20px 20px;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.section-title {
+    font-size: 3em;
+    color: #4b9c4b;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Project Card */
+.project-card, .project2-card, .project3-card {
+    height: auto;
+    border-radius: 20px;
+    background: #4b9c4b;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 8px 16px white;
+    backdrop-filter: blur(5px);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px;
+    max-width: 300px;
+}
+
+.project-card {
+    height: 300px;
+    background-image: url('../assets/Gesture_Driven_Presentation_Project.pic.jpeg');
+}
+
+.project2-card {
+    height: 380px;
+    background-image: url('../assets/PROJECT2.PIC.jpg');
+}
+
+.project3-card {
+    height: 300px;
+    background-image: url('../assets/CNN.jpg');
+}
+
+/* Hover effects */
+.project-card:hover, .project2-card:hover, .project3-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(246, 245, 245, 0.967),
+                0 8px 16px rgb(240, 238, 238),
+                0 4px 8px rgb(239, 237, 236);
+}
+
+/* Project info */
+.project-info, .project2-info, .project3-info {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+    text-align: center;
+    color: snow;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background-color: #4b9c4b;
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    border: 2px solid white;
+}
+
+.project-card:hover .project-info, 
+.project2-card:hover .project2-info, 
+.project3-card:hover .project3-info {
+    opacity: 1;
+    transform: translate3d(0);
+    background-color: rgba(0, 0, 0, 0.142);
+}
+
+.project-info h3, 
+.project2-info h3, 
+.project3-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(246, 243, 243, 0.8);
+}
+
+.project-info p, 
+.project2-info p, 
+.project3-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* GitHub Icon */
+.github-icon {
+    font-size: 2em;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-top: 5px;
+}
+
+.github-icon:hover {
+    color: #4b9c4b;
+    transform: scale(1.2);
+}
+
+.neon {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #4b9c4b;
+}
+
+/* Footer Styling */
+footer {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    color: white;
+    text-align: center;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    /* General Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        height: auto; /* Ensure body takes the full height */
+        display: flex;
+        flex-direction: column; /* Stack header and content vertically */
+        background: black;
+        color: white;
+        cursor: default;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Gooey Cursor */
+    .gooey-cursor {
+        position: fixed;
+        width: 6vw; /* Adjusted size for better visibility */
+        height: 6vw; /* Adjusted size for better visibility */
+        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
+        border-radius: 50%; /* Make it round */
+        pointer-events: none; /* Prevent interfering with other elements */
+        transition: transform 0.1s ease; /* Smooth transition */
+        filter: url(#gooey); /* Apply the gooey effect filter */
+        transform: scale(1);
+        z-index: 9999;
+    }
+
+    .gooey:hover {
+        transform: scale(1.5);
+    }
+
+    /* Define the gooey effect using SVG filter */
+    svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center-aligns items */
+        padding: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+        justify-content: center; /* Centers the button links */
+        gap: 6px; /* Space between all buttons */
+        padding: 10px;
+    }
+    
+    .nav-links .link-button:nth-child(5),
+    .nav-links .link-button:nth-child(6) {
+        margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
+        margin-top: 13px;
+    }
+
+    .link-button {
+        flex: 1 1 5%; /* Allow buttons to take 45% of the width */
+        max-width: 130px; /* Set a maximum width for buttons on mobile */
+        padding: 5px; /* Adjust padding for mobile */
+        font-size: 1.1em; /* Smaller font size for mobile */
+        font-weight: bold;
+    }
+
+    .title h1 {
+        font-size: 3em; /* Reduced size for mobile */
+        color: red;
+        margin: 0px;
+        text-align: center; /* Centered for better layout */
+    }
+
+    .link-button.active {
+        color: red; /* Set active link color to red */
+        font-weight: bold;
+    }
+
+    .link-button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px; /* Reduced height for mobile */
+        bottom: -5px; /* Positioned slightly below the text */
+        left: 0;
+        background-color: #ff5722;
+        opacity: 0; /* Initially hidden */
+        transform: scaleX(0); /* Start with the line scaled down */
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .link-button:hover::before {
+        opacity: 1; /* Make the underline visible on hover */
+        transform: scaleX(1); /* Expand the line */
+    }
+
+    .link-button:hover {
+        transform: translateY(-3px); /* Subtle lift effect */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    /* Projects Section */
+    .projects-section {
+        padding: 5px; /* Reduce padding */
+    }
+
+    .section-title {
+        font-size: 3em; /* Reduce the section title font size */
+        margin-bottom: 20px;
+    }
+
+    .projects-grid {
+        flex-direction: column; /* Stack project cards vertically */
+        gap: 40px;
+        padding-bottom: 80px;
+    }
+
+    /* Project Card Styling */
+    .project-card, .project2-card, .project3-card {
+        width: 68%; /* Allow cards to take full width */
+        max-width: 100%;
+        height: auto; /* Adjust height for mobile */
+    }
+
+    .project-info, .project2-info, .project3-info {
+        padding: 8px; /* Adjust padding within info sections */
+        font-size: 0.9em; /* Reduce font size for readability */
+        font-weight: bold;
+    }
+
+    /* Footer Styling */
+    footer {
+        padding: 0px; /* Increase padding for easier tap targets */
+    }
+
+    footer a {
+        font-size: 0.9em; /* Slightly smaller font for footer links */
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* General Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        height: auto; /* Ensure body takes the full height */
+        display: flex;
+        flex-direction: column; /* Stack header and content vertically */
+        background: black;
+        color: white;
+        cursor: default;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Gooey Cursor */
+    .gooey-cursor {
+        position: fixed;
+        width: 6vw; /* Adjusted size for better visibility */
+        height: 6vw; /* Adjusted size for better visibility */
+        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
+        border-radius: 50%; /* Make it round */
+        pointer-events: none; /* Prevent interfering with other elements */
+        transition: transform 0.1s ease; /* Smooth transition */
+        filter: url(#gooey); /* Apply the gooey effect filter */
+        transform: scale(1);
+        z-index: 9999;
+    }
+
+    .gooey:hover {
+        transform: scale(1.5);
+    }
+
+    /* Define the gooey effect using SVG filter */
+    svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center-aligns items */
+        padding: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+        justify-content: center; /* Centers the button links */
+        gap: 6px; /* Space between all buttons */
+        padding: 10px;
+    }
+    
+    .nav-links .link-button:nth-child(5),
+    .nav-links .link-button:nth-child(6) {
+        margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
+        margin-top: 13px;
+    }
+
+    .link-button {
+        flex: 1 1 5%; /* Allow buttons to take 45% of the width */
+        max-width: 130px; /* Set a maximum width for buttons on mobile */
+        padding: 5px; /* Adjust padding for mobile */
+        font-size: 1.1em; /* Smaller font size for mobile */
+        font-weight: bold;
+    }
+
+    .title h1 {
+        font-size: 3em; /* Reduced size for mobile */
+        color: red;
+        margin: 0px;
+        text-align: center; /* Centered for better layout */
+    }
+
+    .link-button.active {
+        color: red; /* Set active link color to red */
+        font-weight: bold;
+    }
+
+    .link-button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px; /* Reduced height for mobile */
+        bottom: -5px; /* Positioned slightly below the text */
+        left: 0;
+        background-color: #ff5722;
+        opacity: 0; /* Initially hidden */
+        transform: scaleX(0); /* Start with the line scaled down */
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .link-button:hover::before {
+        opacity: 1; /* Make the underline visible on hover */
+        transform: scaleX(1); /* Expand the line */
+    }
+
+    .link-button:hover {
+        transform: translateY(-3px); /* Subtle lift effect */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Projects Section */
+    .projects-section {
+        padding: 10px; /* Increase padding */
+    }
+
+    .section-title {
+        font-size: 3.5em; /* Increase the section title font size */
+        margin-bottom: 20px;
+    }
+
+    .projects-grid {
+        flex-direction: column; /* Stack project cards vertically */
+        gap: 30px; /* Adjust gap between cards */
+        padding-bottom: 80px;
+    }
+
+    /* Project Card Styling */
+    .project-card, .project2-card, .project3-card {
+        width: 58%; /* Allow cards to take a larger width */
+        max-width: 100%;
+        height: auto; /* Adjust height for mobile */
+    }
+
+    .project-info, .project2-info, .project3-info {
+        padding: 10px; /* Adjust padding within info sections */
+        font-size: 1em; /* Increase font size for readability */
+        font-weight: bold;
+    }
+
+    /* Footer Styling */
+    footer {
+        padding: 10px; /* Increase padding for easier tap targets */
+    }
+
+    footer a {
+        font-size: 1em; /* Slightly larger font for footer links */
+    }
+}

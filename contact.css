@@ -1,0 +1,643 @@
+body {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh; /* Ensure body always covers at least the viewport height */
+    display: flex;
+    flex-direction: column;
+    color: snow;
+    cursor: default;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Gooey Cursor */
+.gooey-cursor {
+    position: fixed;
+    width: 3vw; /* Relative size */
+    height: 3vw; /* Relative size */
+    background-color: #4b9c4b; /* Color of the gooey effect */
+    border-radius: 50%; /* Make it round */
+    pointer-events: none; /* Prevent interfering with other elements */
+    transition: transform 0.1s ease; /* Smooth transition */
+    filter: url(#gooey); /* Apply the gooey effect filter */
+    transform: scale(1);
+    z-index: 9999;
+}
+
+.gooey:hover {
+    transform: scale(1.5);
+}
+
+/* Define the gooey effect using SVG filter */
+svg {
+    position: absolute;
+    width:  0;
+    height: 0;
+}
+
+/* Header Styling */
+header {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2%; /* Keep header padding */
+    position: sticky; /* Keep it in normal flow */
+    z-index: 1000; /* Ensure it stays above other content */
+    top: 0;
+}
+
+.title h1 {
+    font-size: 3em;
+    color: #4b9c4b;
+    margin: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.link-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-button.active {
+    color: #4b9c4b; /* Set active link color to red */
+    font-weight: bold;
+}
+
+.link-button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px; /* Larger height to prevent mouse from slipping under */
+    bottom: -5px; /* Positioned slightly below the text */
+    left: 0;
+    background-color: #4b9c4b;
+    opacity: 0; /* Initially hidden */
+    transform: scaleX(0); /* Start with the line scaled down */
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.link-button:hover::before {
+    opacity: 1; /* Make the underline visible on hover */
+    transform: scaleX(1); /* Expand the line */
+}
+
+.link-button:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 30px 20px;
+    text-align: center;
+    flex: 1;
+
+}
+
+.section-title {
+    font-size: 36px;
+    color: #4b9c4b;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #4b9c4b;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;    
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0px 30px rgba(249, 248, 248, 0.944);
+    margin-bottom: 40px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ccc;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #4b9c4b;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #4b9c4b;
+}
+
+/* Contact Info */
+.contact-info {
+    color: white;
+    max-width: 400px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contact-info p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-info a {
+    color: #4b9c4b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 2em;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.social-icons a:hover {
+    color: #4b9c4b;
+    transform: scale(1.1); /* Scale effect for interaction */
+}
+
+/* Tooltip Styling */
+.tooltip {
+    display: none; /* Hide tooltip by default */
+    position: absolute; /* Positioning */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with opacity */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 0.5em; /* Increased font size for better visibility */
+    white-space: nowrap; /* Prevent text wrapping */
+    z-index: 100; /* Ensure it stays above other content */
+}
+
+.social-icons a:hover .tooltip {
+    display: block; /* Show tooltip on hover */
+    bottom: -30px; /* Adjust position above the icon */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center it perfectly */
+    transition: opacity 0.3s ease; /* Smooth appearance */
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    background-color: rgba(0, 128, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    color: green;
+    margin-top: 20px;
+}
+
+/* Neon Effect */
+.neon {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000;
+}
+
+/* Footer Styling */
+footer {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    color: white;
+    text-align: center;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 480px) {
+    
+    /* General Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        height: auto; /* Ensure body takes the full height */
+        display: flex;
+        flex-direction: column; /* Stack header and content vertically */
+        background: black;
+        color: white;
+        cursor: default;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Gooey Cursor */
+    .gooey-cursor {
+        position: fixed;
+        width: 6vw; /* Adjusted size for better visibility */
+        height: 6vw; /* Adjusted size for better visibility */
+        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
+        border-radius: 50%; /* Make it round */
+        pointer-events: none; /* Prevent interfering with other elements */
+        transition: transform 0.1s ease; /* Smooth transition */
+        filter: url(#gooey); /* Apply the gooey effect filter */
+        transform: scale(1);
+        z-index: 9999;
+    }
+
+    .gooey:hover {
+        transform: scale(1.5);
+    }
+
+    /* Define the gooey effect using SVG filter */
+    svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center-aligns items */
+        padding: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+        justify-content: center; /* Centers the button links */
+        gap: 6px; /* Space between all buttons */
+        padding: 10px;
+    }
+    
+    .nav-links .link-button:nth-child(5),
+    .nav-links .link-button:nth-child(6) {
+        margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
+        margin-top: 13px;
+    }
+
+
+    .link-button {
+        flex: 1 1 5%; /* Allow buttons to take 45% of the width */
+        max-width: 130px; /* Set a maximum width for buttons on mobile */
+        padding: 5px; /* Adjust padding for mobile */
+        font-size: 1.1em; /* Smaller font size for mobile */
+        font-weight: bold;
+    }
+
+    .title h1 {
+        font-size: 3em; /* Reduced size for mobile */
+        color: red;
+        margin: 0px;
+        text-align: center; /* Centered for better layout */
+    }
+
+    .link-button.active {
+        color: red; /* Set active link color to red */
+        font-weight: bold;
+    }
+
+    .link-button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px; /* Reduced height for mobile */
+        bottom: -5px; /* Positioned slightly below the text */
+        left: 0;
+        background-color: #ff5722;
+        opacity: 0; /* Initially hidden */
+        transform: scaleX(0); /* Start with the line scaled down */
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .link-button:hover::before {
+        opacity: 1; /* Make the underline visible on hover */
+        transform: scaleX(1); /* Expand the line */
+    }
+
+    .link-button:hover {
+        transform: translateY(-3px); /* Subtle lift effect */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    /* Contact Section */
+    .section-title {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1em;
+    }
+
+    .contact-form button {
+        padding: 10px;
+        font-size: 1.3em;
+    }
+
+    /* Contact Info */
+    .contact-info {
+        max-width: 100%;
+        font-size: 1.2em;
+    }
+
+    .contact-info h3 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .contact-info p {
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+
+    /* Social Icons */
+    .social-icons {
+        justify-content: center;
+    }
+
+    .social-icons a {
+        font-size: 1.5em; /* Reduce icon size for small screens */
+    }
+
+    /* Tooltip Styling */
+    .tooltip {
+        font-size: 0.8em;
+    }
+
+    /* Footer Styling */
+    footer {
+        padding: 0px;
+        font-size: 0.9em;
+        margin: 0;
+        position: relative;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    /* General Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        height: auto; /* Ensure body takes the full height */
+        display: flex;
+        flex-direction: column; /* Stack header and content vertically */
+        background: black;
+        color: white;
+        cursor: default;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Gooey Cursor */
+    .gooey-cursor {
+        position: fixed;
+        width: 6vw; /* Adjusted size for better visibility */
+        height: 6vw; /* Adjusted size for better visibility */
+        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
+        border-radius: 50%; /* Make it round */
+        pointer-events: none; /* Prevent interfering with other elements */
+        transition: transform 0.1s ease; /* Smooth transition */
+        filter: url(#gooey); /* Apply the gooey effect filter */
+        transform: scale(1);
+        z-index: 9999;
+    }
+
+    .gooey:hover {
+        transform: scale(1.5);
+    }
+
+    /* Define the gooey effect using SVG filter */
+    svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center-aligns items */
+        padding: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+        justify-content: center; /* Centers the button links */
+        gap: 6px; /* Space between all buttons */
+        padding: 10px;
+    }
+    
+    .nav-links .link-button:nth-child(5),
+    .nav-links .link-button:nth-child(6) {
+        margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
+        margin-top: 13px;
+    }
+
+
+    .link-button {
+        flex: 1 1 5%; /* Allow buttons to take 45% of the width */
+        max-width: 130px; /* Set a maximum width for buttons on mobile */
+        padding: 5px; /* Adjust padding for mobile */
+        font-size: 1.1em; /* Smaller font size for mobile */
+        font-weight: bold;
+    }
+
+    .title h1 {
+        font-size: 3em; /* Reduced size for mobile */
+        color: red;
+        margin: 0px;
+        text-align: center; /* Centered for better layout */
+    }
+
+    .link-button.active {
+        color: red; /* Set active link color to red */
+        font-weight: bold;
+    }
+
+    .link-button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px; /* Reduced height for mobile */
+        bottom: -5px; /* Positioned slightly below the text */
+        left: 0;
+        background-color: #ff5722;
+        opacity: 0; /* Initially hidden */
+        transform: scaleX(0); /* Start with the line scaled down */
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .link-button:hover::before {
+        opacity: 1; /* Make the underline visible on hover */
+        transform: scaleX(1); /* Expand the line */
+    }
+
+    .link-button:hover {
+        transform: translateY(-3px); /* Subtle lift effect */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Contact Section */
+    .section-title {
+        font-size: 2em; /* Adjusted size for medium screens */
+        margin-bottom: 20px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 400px; /* Increased max-width for better visibility */
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1em;
+    }
+
+    .contact-form button {
+        padding: 10px;
+        font-size: 1.3em;
+    }
+
+    /* Contact Info */
+    .contact-info {
+        max-width: 100%;
+        font-size: 1.2em;
+    }
+
+    .contact-info h3 {
+        font-size: 1.5em; /* Increased size for better visibility */
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .contact-info p {
+        font-size: 1em; /* Adjusted size for medium screens */
+        font-weight: bold;
+    }
+
+    /* Social Icons */
+    .social-icons {
+        justify-content: center;
+    }
+
+    .social-icons a {
+        font-size: 1.5em; /* Maintain icon size for medium screens */
+    }
+
+    /* Tooltip Styling */
+    .tooltip {
+        font-size: 0.8em;
+    }
+
+    /* Footer Styling */
+    footer {
+        padding: 0px;
+        font-size: 0.9em;
+        position: relative;
+    }
+}

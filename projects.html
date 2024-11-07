@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <svg width="0" height="0">
+        <filter id="gooey">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 
+                                                               0 1 0 0 0 
+                                                               0 0 1 0 0 
+                                                               0 0 0 18 -7" 
+                           result="gooey" />
+            <feBlend in="SourceGraphic" in2="gooey" operator="over" />
+        </filter>
+    </svg>
+    <header>
+        <div class="title">
+            <h1>PORTFO<span style="color: white;" class="neon">LIO</span></h1>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html" class="link-button">HOME</a>
+                <a href="about.html" class="link-button">ABOUT</a>
+                <a href="skills.html" class="link-button">SKILLS</a>
+                <a href="projects.html" class="link-button active">PROJECTS</a>
+                <a href="certifications.html" class="link-button">CERTIFICATIONS</a>
+                <a href="contact.html" class="link-button">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <h2 class="section-title">PROJECTS</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Gesture Driven Presentation Control</h3>
+                    <p>Uses hand gestures to control slides in a presentation, providing a touchless and interactive experience.</p>
+                    <a href="https://github.com/SurendraReddy3" class="github-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project2-card">
+                <div class="project2-info">
+                    <h3>Responsive Personal Portfolio</h3>
+                    <p>An attractive and responsive personal portfolio website, showcasing skills and projects.</p>
+                    <a href="https://github.com/SurendraReddy3" class="github-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project3-card">
+                <div class="project3-info">
+                    <h3>Handwritten Digit Recognition Using CNN</h3>
+                    <p>Implemented a CNN model to recognize and classify handwritten digits with high accuracy.</p>
+                    <a href="https://github.com/SurendraReddy3" class="github-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+    <script>
+        const gooeyCursor = document.createElement("div");
+        gooeyCursor.className = "gooey-cursor";
+        document.body.appendChild(gooeyCursor);
+
+        document.addEventListener("mousemove", (e) => {
+            gooeyCursor.style.transform = `translate3d(${e.clientX - 25}px, ${e.clientY - 25}px, 0)`; 
+        });
+
+        // Optional: Add a scale effect on hover
+        document.querySelectorAll('.link-button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                gooeyCursor.style.transform += ' scale(1.5)'; // Increase size on hover
+            });
+            button.addEventListener('mouseleave', () => {
+                gooeyCursor.style.transform += ' scale(2)'; // Reset size
+            });
+        });
+    </script> 
+
+    <footer>
+        <p>&copy; 2024 Surendra Reddy Gandra. All rights reserved.</p>
+    </footer>
+</body>
+</html>

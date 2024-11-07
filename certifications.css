@@ -1,0 +1,528 @@
+body {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh; /* Ensure body always covers at least the viewport height */
+    display: flex;
+    flex-direction: column;
+    color: snow;
+    cursor: default;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Gooey Cursor */
+.gooey-cursor {
+    position: fixed;
+    width: 3vw; /* Relative size */
+    height: 3vw; /* Relative size */
+    background-color: #4b9c4b; /* Color of the gooey effect */
+    border-radius: 50%; /* Make it round */
+    pointer-events: none; /* Prevent interfering with other elements */
+    transition: transform 0.1s ease; /* Smooth transition */
+    filter: url(#gooey); /* Apply the gooey effect filter */
+    transform: scale(1);
+    z-index: 9999;
+}
+
+.gooey:hover {
+    transform: scale(1.5);
+}
+
+/* Define the gooey effect using SVG filter */
+svg {
+    position: absolute;
+    width:  0;
+    height: 0;
+}
+
+/* Header Styling */
+header {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2%; /* Keep header padding */
+    position: sticky; /* Keep it in normal flow */
+    z-index: 1000; /* Ensure it stays above other content */
+    top: 0;
+}
+
+.title h1 {
+    font-size: 3em;
+    color: #4b9c4b;
+    margin: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.link-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-button.active {
+    color: #4b9c4b; /* Set active link color to red */
+    font-weight: bold;
+}
+
+.link-button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px; /* Larger height to prevent mouse from slipping under */
+    bottom: -5px; /* Positioned slightly below the text */
+    left: 0;
+    background-color: #4b9c4b;
+    opacity: 0; /* Initially hidden */
+    transform: scaleX(0); /* Start with the line scaled down */
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.link-button:hover::before {
+    opacity: 1; /* Make the underline visible on hover */
+    transform: scaleX(1); /* Expand the line */
+}
+
+.link-button:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.certifications-section {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    text-align: center;
+    padding: 20px;
+}
+
+.certification-subsection {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #4b9c4b;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.certification-subsection h3 {
+    font-size: 2rem;
+    color: #4b9c4b;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Grid layout */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+}
+
+/* Card hover effect */
+.cert-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(244, 243, 243, 0.937);
+    border: 2px solid white;
+}
+
+.cert-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #4b9c4b;
+    color: #4b9c4b;
+    font-weight: bold;
+}
+
+.cert-info p {
+    font-size: 16px;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+.cert-link {
+    color: #4b9c4b;
+    text-decoration: none;
+    font-size: 1em;
+    display: inline-block;
+    border: 2px solid #4b9c4b;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.cert-link:hover {
+    background-color: #4b9c4b;
+    color: white;
+    transform: scale(1.05);
+}
+
+.neon {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000;
+}
+
+/* Footer */
+footer {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    color: white;
+    text-align: center;
+    padding: 0px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    /* General Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        height: auto; /* Ensure body takes the full height */
+        display: flex;
+        flex-direction: column; /* Stack header and content vertically */
+        background: black;
+        color: white;
+        cursor: default;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Gooey Cursor */
+    .gooey-cursor {
+        position: fixed;
+        width: 6vw; /* Adjusted size for better visibility */
+        height: 6vw; /* Adjusted size for better visibility */
+        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
+        border-radius: 50%; /* Make it round */
+        pointer-events: none; /* Prevent interfering with other elements */
+        transition: transform 0.1s ease; /* Smooth transition */
+        filter: url(#gooey); /* Apply the gooey effect filter */
+        transform: scale(1);
+        z-index: 9999;
+    }
+
+    .gooey:hover {
+        transform: scale(1.5);
+    }
+
+    /* Define the gooey effect using SVG filter */
+    svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center-aligns items */
+        padding: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+        justify-content: center; /* Centers the button links */
+        gap: 6px; /* Space between all buttons */
+        padding: 10px;
+    }
+    
+    .nav-links .link-button:nth-child(5),
+    .nav-links .link-button:nth-child(6) {
+        margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
+        margin-top: 13px;
+    }
+
+
+    .link-button {
+        flex: 1 1 5%; /* Allow buttons to take 45% of the width */
+        max-width: 130px; /* Set a maximum width for buttons on mobile */
+        padding: 5px; /* Adjust padding for mobile */
+        font-size: 1.1em; /* Smaller font size for mobile */
+        font-weight: bold;
+    }
+
+    .title h1 {
+        font-size: 3em; /* Reduced size for mobile */
+        color: red;
+        margin: 0px;
+        text-align: center; /* Centered for better layout */
+    }
+
+    .link-button.active {
+        color: red; /* Set active link color to red */
+        font-weight: bold;
+    }
+
+    .link-button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px; /* Reduced height for mobile */
+        bottom: -5px; /* Positioned slightly below the text */
+        left: 0;
+        background-color: #ff5722;
+        opacity: 0; /* Initially hidden */
+        transform: scaleX(0); /* Start with the line scaled down */
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .link-button:hover::before {
+        opacity: 1; /* Make the underline visible on hover */
+        transform: scaleX(1); /* Expand the line */
+    }
+
+    .link-button:hover {
+        transform: translateY(-3px); /* Subtle lift effect */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 2.3rem;
+        margin-bottom: 20px;
+    }
+
+    .certification-subsection h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Grid layout */
+    .certifications-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    /* Certification Card */
+    .cert-card {
+        padding: 15px;
+    }
+
+    .cert-info h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .cert-info p {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .cert-link {
+        padding: 6px 12px;
+        font-size: 0.9em;
+        font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px 0;
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* General Styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        height: auto; /* Ensure body takes the full height */
+        display: flex;
+        flex-direction: column; /* Stack header and content vertically */
+        background: black;
+        color: white;
+        cursor: default;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Gooey Cursor */
+    .gooey-cursor {
+        position: fixed;
+        width: 6vw; /* Adjusted size for better visibility */
+        height: 6vw; /* Adjusted size for better visibility */
+        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
+        border-radius: 50%; /* Make it round */
+        pointer-events: none; /* Prevent interfering with other elements */
+        transition: transform 0.1s ease; /* Smooth transition */
+        filter: url(#gooey); /* Apply the gooey effect filter */
+        transform: scale(1);
+        z-index: 9999;
+    }
+
+    .gooey:hover {
+        transform: scale(1.5);
+    }
+
+    /* Define the gooey effect using SVG filter */
+    svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center-aligns items */
+        padding: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+        justify-content: center; /* Centers the button links */
+        gap: 6px; /* Space between all buttons */
+        padding: 10px;
+    }
+    
+    .nav-links .link-button:nth-child(5),
+    .nav-links .link-button:nth-child(6) {
+        margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
+        margin-top: 13px;
+    }
+
+    .link-button {
+        flex: 1 1 5%; /* Allow buttons to take 45% of the width */
+        max-width: 130px; /* Set a maximum width for buttons on mobile */
+        padding: 5px; /* Adjust padding for mobile */
+        font-size: 1.1em; /* Smaller font size for mobile */
+        font-weight: bold;
+    }
+
+    .title h1 {
+        font-size: 3em; /* Reduced size for mobile */
+        color: red;
+        margin: 0px;
+        text-align: center; /* Centered for better layout */
+    }
+
+    .link-button.active {
+        color: red; /* Set active link color to red */
+        font-weight: bold;
+    }
+
+    .link-button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px; /* Reduced height for mobile */
+        bottom: -5px; /* Positioned slightly below the text */
+        left: 0;
+        background-color: #ff5722;
+        opacity: 0; /* Initially hidden */
+        transform: scaleX(0); /* Start with the line scaled down */
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .link-button:hover::before {
+        opacity: 1; /* Make the underline visible on hover */
+        transform: scaleX(1); /* Expand the line */
+    }
+
+    .link-button:hover {
+        transform: translateY(-3px); /* Subtle lift effect */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section Titles */
+    .section-title {
+        font-size: 2.5rem; /* Slightly larger than mobile */
+        margin-bottom: 20px;
+    }
+
+    .certification-subsection h3 {
+        font-size: 1.8rem; /* Maintain similar size */
+    }
+
+    /* Grid layout */
+    .certifications-grid {
+        display: grid;
+        grid-template-columns: repeat(1fr); /* Two columns layout */
+        gap: 20px;
+        padding: 0 20px; /* Increased padding for larger screens */
+    }
+
+    /* Certification Card */
+    .cert-card {
+        padding: 15px;
+    }
+
+    .cert-info h3 {
+        font-size: 22px; /* Adjusted size for better visibility */
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .cert-info p {
+        font-size: 16px; /* Slightly larger text for readability */
+        font-weight: bold;
+    }
+
+    .cert-link {
+        padding: 8px 12px;
+        font-size: 1em; /* Slightly larger font size */
+        font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px 0;
+        font-size: 1em; /* Larger font size for footer */
+    }
+}
+

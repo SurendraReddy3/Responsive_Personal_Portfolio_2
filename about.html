@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <svg width="0" height="0">
+        <filter id="gooey">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 
+                                                               0 1 0 0 0 
+                                                               0 0 1 0 0 
+                                                               0 0 0 18 -7" 
+                           result="gooey" />
+            <feBlend in="SourceGraphic" in2="gooey" operator="over" />
+        </filter>
+    </svg>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="title">
+            <h1>PORTFO<span style="color: white;" class="neon">LIO</span></h1>
+        </div>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html" class="link-button">HOME</a>
+                <a href="about.html" class="link-button active">ABOUT</a>
+                <a href="skills.html" class="link-button">SKILLS</a>
+                <a href="projects.html" class="link-button">PROJECTS</a>
+                <a href="certifications.html" class="link-button">CERTIFICATIONS</a>
+                <a href="contact.html" class="link-button">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <div class="profile-card">
+            <div class="image-container">
+                <img src="../assets/Profile_pic.jpeg" alt="Profile Image" class="profile-image">
+            </div>
+            <div class="info-card">
+                <p><strong>Name</strong><br>Surendra Reddy Gandra</p>
+                <p><strong>Birthday</strong><br>Jan 22, 2003</p>
+                <p><strong>Mail</strong><br>gsrgsreddy3@gmail.com</p>
+                <p><strong>Phone</strong><br>+91 9121758435</p>
+                <p><strong>Address</strong><br>Miyapur, Hyderabad</p>
+            </div>
+        </div>
+
+
+        <div class="about-me">
+            <h2>ABOUT ME</h2>
+            <h1>Aspiring Full Stack Developer</h1>
+            <p>Hello! I'm Surendra Reddy Gandra, a Recent(2024) Graduate in Computer Science Engineering with a focus on AI/ML, currently based in Hyderabad. I am passionate about Full Stack Development and eager to embark on my professional journey.</p>
+            <p>As an Aspiring Developer, I have cultivated skills in both front-end and back-end technologies. I am proficient in front-end development using HTML, CSS, and JavaScript, and have foundational knowledge in back-end technologies like Python and Django. I am dedicated to creating engaging user experiences while ensuring robust functionality.</p>
+            <p>I am actively seeking job opportunities where I can apply my skills and contribute to innovative projects in the tech industry. Let's connect!</p>
+            
+            <!-- Button placed inside the About Me section -->
+            <a href="../assets/Surendra_Reddy_Gandra_Python_Developer.pdf" class="download-cv" download>DOWNLOAD RESUME</a>
+        </div>
+        
+    </div>
+
+    <script>
+        const gooeyCursor = document.createElement("div");
+        gooeyCursor.className = "gooey-cursor";
+        document.body.appendChild(gooeyCursor);
+
+        document.addEventListener("mousemove", (e) => {
+            gooeyCursor.style.transform = `translate3d(${e.clientX - 25}px, ${e.clientY - 25}px, 0)`; 
+        });
+
+        // Optional: Add a scale effect on hover
+        document.querySelectorAll('.link-button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                gooeyCursor.style.transform += ' scale(1.5)'; // Increase size on hover
+            });
+            button.addEventListener('mouseleave', () => {
+                gooeyCursor.style.transform += ' scale(2)'; // Reset size
+            });
+        });
+    </script> 
+
+
+    <!-- Footer Section --> 
+    <footer>
+        <p>&copy; 2024 Surendra Reddy Gandra. All rights reserved.</p>
+    </footer>
+</body>
+</html>

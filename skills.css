@@ -1,0 +1,527 @@
+body {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    min-height: 100vh; /* Ensure body always covers at least the viewport height */
+    display: flex;
+    flex-direction: column;
+    color: snow;
+    cursor: default;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+.gooey-cursor {
+    position: fixed;
+    width: 3vw; /* Relative size */
+    height: 3vw; /* Relative size */
+    background-color: #4b9c4b; /* Color of the gooey effect */
+    border-radius: 50%; /* Make it round */
+    pointer-events: none; /* Prevent interfering with other elements */
+    transition: transform 0.1s ease; /* Smooth transition */
+    filter: url(#gooey); /* Apply the gooey effect filter */
+    transform: scale(1);
+    z-index: 9999;
+}
+
+.gooey:hover {
+    transform: scale(1.5);
+}
+
+h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Styling */
+header {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2%; /* Keep header padding */
+    position: sticky; /* Keep it in normal flow */
+    z-index: 1000; /* Ensure it stays above other content */
+    top: 0;
+}
+
+.title h1 {
+    font-size: 3em;
+    color: #4b9c4b;
+    margin: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.link-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-button.active {
+    color: #4b9c4b; /* Set active link color to red */
+    font-weight: bold;
+}
+
+.link-button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px; /* Larger height to prevent mouse from slipping under */
+    bottom: -5px; /* Positioned slightly below the text */
+    left: 0;
+    background-color: #4b9c4b;
+    opacity: 0; /* Initially hidden */
+    transform: scaleX(0); /* Start with the line scaled down */
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.link-button:hover::before {
+    opacity: 1; /* Make the underline visible on hover */
+    transform: scaleX(1); /* Expand the line */
+}
+
+.link-button:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section and Footer styles unchanged */
+.skills-section {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    padding: 2vh; /* Relative padding */
+    text-align: center;
+    flex: 1; /* Allow the section to expand and take up available space */
+    padding-top: 10px;
+}
+
+.skills-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.skills-section h2 {
+    font-size: 2.5em; /* Relative size */
+    color: #4b9c4b;
+    margin: 0; /* Remove margin for consistency */
+    position: relative;
+    z-index: 1;
+}
+
+.skill-category {
+    margin-bottom: 3vh; /* Relative margin */
+}
+
+.skill-category h3 {
+    font-size: 2em; /* Relative size */
+    color: #4b9c4b;
+    margin-bottom: 2vh; /* Relative margin */
+    position: relative;
+    padding-bottom: 1vh; /* Relative padding */
+    text-shadow: 0 0 8px #4b9c4b;
+    z-index: 1;
+    font-weight: bold;
+}
+
+.skill-category h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 0.4em; /* Relative height */
+    background-color: #4b9c4b;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust min size */
+    gap: 2vh; /* Relative gap */
+    justify-content: center;
+    z-index: 1;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    padding: 2vh; /* Relative padding */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+.skill-item img {
+    width: 20vw; /* Relative width */
+    height: 20vw; /* Relative height */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+
+.skill-item h4 {
+    font-size: 1.5em; /* Relative size */
+    color: #fff;
+    margin-top: 1vh; /* Relative margin */
+}
+
+.skill-item:hover {
+    transform: translateY(-1em); /* Slight lift on hover */
+    border: 2px solid #4b9c4b;
+}
+
+.neon {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000;
+}
+
+/* Footer Styling */
+footer {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-color: #050000; /* Darker background for contrast */
+    color: white;
+    text-align: center; /* Center text */
+    position: relative; /* Change to relative to avoid overlap */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    padding: 0; /* Relative padding */
+}
+
+/* Optional: Add hover effects if you have links */
+footer a {
+    color: white; /* Ensuring footer links are visible */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+
+@media (max-width: 480px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        height: auto; /* Ensure body takes the full height */
+        display: flex;
+        flex-direction: column; /* Stack header and content vertically */
+        background: black;
+        color: white;
+        cursor: default;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Gooey Cursor */
+    .gooey-cursor {
+        position: fixed;
+        width: 6vw; /* Adjusted size for better visibility */
+        height: 6vw; /* Adjusted size for better visibility */
+        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
+        border-radius: 50%; /* Make it round */
+        pointer-events: none; /* Prevent interfering with other elements */
+        transition: transform 0.1s ease; /* Smooth transition */
+        filter: url(#gooey); /* Apply the gooey effect filter */
+        transform: scale(1);
+        z-index: 9999;
+    }
+
+    .gooey:hover {
+        transform: scale(1.5);
+    }
+
+    /* Define the gooey effect using SVG filter */
+    svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center-aligns items */
+        padding: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+        justify-content: center; /* Centers the button links */
+        gap: 6px; /* Space between all buttons */
+        padding: 10px;
+    }
+    
+    .nav-links .link-button:nth-child(5),
+    .nav-links .link-button:nth-child(6) {
+        margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
+        margin-top: 13px;
+    }
+
+
+    .link-button {
+        flex: 1 1 5%; /* Allow buttons to take 45% of the width */
+        max-width: 130px; /* Set a maximum width for buttons on mobile */
+        padding: 5px; /* Adjust padding for mobile */
+        font-size: 1.1em; /* Smaller font size for mobile */
+        font-weight: bold;
+    }
+
+    .title h1 {
+        font-size: 3em; /* Reduced size for mobile */
+        color: red;
+        margin: 0px;
+        text-align: center; /* Centered for better layout */
+    }
+
+    .link-button.active {
+        color: red; /* Set active link color to red */
+        font-weight: bold;
+    }
+
+    .link-button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px; /* Reduced height for mobile */
+        bottom: -5px; /* Positioned slightly below the text */
+        left: 0;
+        background-color: #ff5722;
+        opacity: 0; /* Initially hidden */
+        transform: scaleX(0); /* Start with the line scaled down */
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .link-button:hover::before {
+        opacity: 1; /* Make the underline visible on hover */
+        transform: scaleX(1); /* Expand the line */
+    }
+
+    .link-button:hover {
+        transform: translateY(-3px); /* Subtle lift effect */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .skills-section {
+        padding: 1vh; /* Reduced padding */
+        text-align: center;
+        flex: 1; /* Allow the section to expand */
+    }
+
+    .skills-section h2 {
+        font-size: 2.5em; /* Decrease size for mobile */
+    }
+
+    .skill-category h3 {
+        font-size: 2em; /* Smaller size for mobile */
+        margin-bottom: 1.5vh; /* Adjust margin */
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5vh; /* Reduced gap */
+    }
+
+    .skill-item {
+        padding: 1.5vh; /* Reduced padding */
+    }
+
+    .skill-item img {
+        width: 30vw; /* Increase image size for better visibility */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .skill-item h4 {
+        font-size: 1.5em; /* Adjust font size */
+    }
+
+    footer {
+        padding: 5px; /* Add padding for footer */
+        font-size: 0.9em; /* Adjust font size */
+    }
+
+    footer a {
+        font-size: 0.8em; /* Smaller font for links */
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        height: auto; /* Ensure body takes the full height */
+        display: flex;
+        flex-direction: column; /* Stack header and content vertically */
+        background: black;
+        color: white;
+        cursor: default;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Gooey Cursor */
+    .gooey-cursor {
+        position: fixed;
+        width: 6vw; /* Adjusted size for better visibility */
+        height: 6vw; /* Adjusted size for better visibility */
+        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
+        border-radius: 50%; /* Make it round */
+        pointer-events: none; /* Prevent interfering with other elements */
+        transition: transform 0.1s ease; /* Smooth transition */
+        filter: url(#gooey); /* Apply the gooey effect filter */
+        transform: scale(1);
+        z-index: 9999;
+    }
+
+    .gooey:hover {
+        transform: scale(1.5);
+    }
+
+    /* Define the gooey effect using SVG filter */
+    svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center-aligns items */
+        padding: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+        justify-content: center; /* Centers the button links */
+        gap: 6px; /* Space between all buttons */
+        padding: 10px;
+    }
+    
+    .nav-links .link-button:nth-child(5),
+    .nav-links .link-button:nth-child(6) {
+        margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
+        margin-top: 13px;
+    }
+
+
+    .link-button {
+        flex: 1 1 5%; /* Allow buttons to take 45% of the width */
+        max-width: 130px; /* Set a maximum width for buttons on mobile */
+        padding: 5px; /* Adjust padding for mobile */
+        font-size: 1.1em; /* Smaller font size for mobile */
+        font-weight: bold;
+    }
+
+    .title h1 {
+        font-size: 3em; /* Reduced size for mobile */
+        color: red;
+        margin: 0px;
+        text-align: center; /* Centered for better layout */
+    }
+
+    .link-button.active {
+        color: red; /* Set active link color to red */
+        font-weight: bold;
+    }
+
+    .link-button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px; /* Reduced height for mobile */
+        bottom: -5px; /* Positioned slightly below the text */
+        left: 0;
+        background-color: #ff5722;
+        opacity: 0; /* Initially hidden */
+        transform: scaleX(0); /* Start with the line scaled down */
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .link-button:hover::before {
+        opacity: 1; /* Make the underline visible on hover */
+        transform: scaleX(1); /* Expand the line */
+    }
+
+    .link-button:hover {
+        transform: translateY(-3px); /* Subtle lift effect */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .skills-section {
+        padding: 2vh; /* Increased padding for better spacing */
+        text-align: center;
+        flex: 1; /* Allow the section to expand */
+    }
+
+    .skills-section h2 {
+        font-size: 3em; /* Decrease size for mobile */
+    }
+
+    .skill-category h3 {
+        font-size: 2.5em; /* Smaller size for mobile */
+        margin-bottom: 2vh; /* Adjust margin */
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust grid layout for medium screens */
+        gap: 2vh; /* Increased gap */
+    }
+
+    .skill-item {
+        padding: 2vh; /* Increased padding */
+    }
+
+    .skill-item img {
+        width: 40vw; /* Increase image size for better visibility */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .skill-item h4 {
+        font-size: 1.8em; /* Adjust font size */
+    }
+
+    footer {
+        padding: 10px; /* Add padding for footer */
+        font-size: 1em; /* Adjust font size */
+    }
+
+    footer a {
+        font-size: 0.9em; /* Smaller font for links */
+    }
+}

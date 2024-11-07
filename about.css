@@ -1,0 +1,617 @@
+body {
+    background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: snow;
+    cursor: default;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+    .gooey-cursor {
+        position: fixed;
+        width: 45px; /* Size of the gooey cursor */
+        height: 45px;
+        background-color: #4b9c4b; /* Color of the gooey effect */
+        border-radius: 50%; /* Make it round */
+        pointer-events: none; /* Prevent interfering with other elements */
+        transition: transform 0.1s ease; /* Smooth transition */
+        filter: url(#gooey); /* Apply the gooey effect filter */
+        z-index: 9999;
+    }
+
+    .gooey-cursor:hover {
+        transform: scale(1.5); /* Scale up on hover */
+    }
+
+    svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+
+    h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    header {
+        background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 2%; /* Keep header padding */
+        position: sticky; /* Keep it in normal flow */
+        z-index: 1000; /* Ensure it stays above other content */
+        top: 0;
+    }
+
+    .title h1 {
+        font-size: 3em;
+        color: #4b9c4b;
+        margin: 5px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+        font-weight: bold;
+    }
+
+    .link-button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        color: white;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .link-button.active {
+        color: #4b9c4b; /* Set active link color to red */
+        font-weight: bold;
+    }
+
+    .link-button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 6px; /* Larger height to prevent mouse from slipping under */
+        bottom: -5px; /* Positioned slightly below the text */
+        left: 0;
+        background-color: #4b9c4b;
+        opacity: 0; /* Initially hidden */
+        transform: scaleX(0); /* Start with the line scaled down */
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .link-button:hover::before {
+        opacity: 1; /* Make the underline visible on hover */
+        transform: scaleX(1); /* Expand the line */
+    }
+
+    .link-button:hover {
+        transform: translateY(-5px); /* Subtle lift effect */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+        flex: 1; /* Allow it to grow and take available space */
+        display: flex;
+        align-items: center; /* Center items vertically */
+        justify-content: flex-start; /* Center items horizontally */
+        width: 100%;
+        max-width: 1200px;
+        margin-left: 100px; /* Center container */
+        padding: 20px; /* Maintain padding */
+        margin-bottom: 100px;
+    }
+
+    .profile-card {
+        position: relative;
+        margin-right: 50px;
+        margin-top: 20px;
+        display: flex;
+    }
+
+    .image-container {
+        position: flex;
+        width: 300px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .profile-image {
+        box-shadow: 0 0 50px rgba(245, 243, 245, 0.896);
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        margin-bottom: 50px;
+        border-radius: 10px; /* Rounded corners */
+        margin-left: 60px;
+    }
+
+    .info-card {
+        position: absolute;
+        bottom: -70px;
+        left: 230px;
+        background-color: #4b9c4b;
+        color: white;
+        width: 75%;
+        box-sizing: border-box;
+        text-align: left;
+        border-radius: 10px;
+    }
+
+    .info-card p {
+        margin: 18px 10px;
+        font-weight: bold;
+    }
+
+    .about-me {
+        margin-left: 20%;
+        max-width: 1000px;
+    }
+
+    .about-me h2 {
+        color: #4b9c4b;
+        margin-bottom: 10px;
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+
+    .about-me h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: white;
+    }
+
+    .about-me p {
+        color: white;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .about-me .download-cv {
+        background-color: #4b9c4b;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s, transform 0.3s;
+        font-weight: bold;
+    }
+
+    .about-me .download-cv:hover {
+        background-color: #4b9c4b;
+        transform: scale(1.10);
+    }
+
+    .neon {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000;
+    }
+
+    footer {
+        background-image: url(../assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        color: white;
+        text-align: center;
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+@media (max-width: 480px) {
+        /* General Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            min-height: 100vh; /* Ensure it takes at least the full viewport height */
+            display: flex;
+            flex-direction: column; /* Stack header and content vertically */
+            background: black;
+            color: white;
+            cursor: default;
+            padding: 0;
+            overflow-x: hidden;
+        }
+    
+        .gooey-cursor {
+            width: 35px; /* Reduced size for mobile */
+            height: 35px;
+        }
+    
+        .gooey-cursor:hover {
+            transform: scale(1.3); /* Scale down hover effect */
+        }
+    
+        header {
+            display: flex;
+            flex-direction: column; /* Stack header items vertically */
+            align-items: center; /* Center-aligns items */
+            padding: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+            justify-content: center; /* Centers the button links */
+            gap: 6px; /* Space between all buttons */
+            padding: 10px;
+        }
+        
+        .nav-links .link-button:nth-child(5),
+        .nav-links .link-button:nth-child(6) {
+            margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
+            margin-top: 13px;
+        }
+    
+    
+        .link-button {
+            flex: 1 1 5%; /* Allow buttons to take 45% of the width */
+            max-width: 130px; /* Set a maximum width for buttons on mobile */
+            padding: 5px; /* Adjust padding for mobile */
+            font-size: 1.1em; /* Smaller font size for mobile */
+            font-weight: bold;
+        }
+    
+        .title h1 {
+            font-size: 3em; /* Reduced size for mobile */
+            color: red;
+            margin: 0px;
+            text-align: center; /* Centered for better layout */
+        }
+    
+        .link-button.active {
+            color: red; /* Set active link color to red */
+            font-weight: bold;
+        }
+    
+        .link-button::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px; /* Reduced height for mobile */
+            bottom: -5px; /* Positioned slightly below the text */
+            left: 0;
+            background-color: #ff5722;
+            opacity: 0; /* Initially hidden */
+            transform: scaleX(0); /* Start with the line scaled down */
+            transform-origin: center;
+            transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        }
+    
+        .link-button:hover::before {
+            opacity: 1; /* Make the underline visible on hover */
+            transform: scaleX(1); /* Expand the line */
+        }
+    
+        .link-button:hover {
+            transform: translateY(-3px); /* Subtle lift effect */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+    
+        .container {
+            flex: 1; /* Allow it to grow and take available space */
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            justify-content: flex-start; /* Center items */
+            width: 100%;
+            margin: 0; /* Remove side margin */
+            padding: 0 10px; /* Reduced padding */
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    
+        .profile-card {
+            position: relative; /* Make this position relative for overlapping */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack image and info card vertically */
+            align-items: center; /* Center items */
+            margin: 10; /* Remove right margin */
+        }
+    
+        .image-container {
+            width: 220px; /* Reduced width */
+            height: 280px; /* Reduced height */
+            margin: 0 20 -20px -20; /* Negative margin for overlapping */
+            position: relative; /* Allow absolute positioning for the info card */
+            z-index: 0; /* Bring image to the front */
+            left: -15px;
+        }   
+    
+        .profile-image {
+            width: 120%;
+            height: auto; /* Keep aspect ratio */
+            margin-left: 0; /* Remove left margin */
+            border-radius: 20px;
+        }
+    
+        .info-card {
+            position: relative; /* Adjust positioning */
+            margin-top: -190px; /* Adjust this to position over the image */
+            left: 100px;
+            background-color: red;
+            color: white;
+            width: 95%; /* Full width on mobile */
+            padding: 0px; /* Reduced padding to decrease height */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+            border-radius: 5px; /* Optional: Add rounding to corners */
+            z-index: 0;
+            max-height: 290px;
+            overflow: auto;
+        }
+    
+        .about-me {
+            margin-left: 0; /* Remove left margin */
+            max-width: 100%; /* Ensure it uses full width */
+            padding: 0 10px; /* Add some padding */
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 60px;
+        }
+    
+        .about-me h2 {
+            font-size: 3em; /* Reduced font size */
+            margin: 10px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+    
+        .about-me h1 {
+            font-size: 28px; /* Reduced font size */
+            margin-bottom: 10px; /* Adjusted margin */
+            margin-top: 0px;
+            font-weight: bold;
+        }
+    
+        .about-me p {
+            font-size: 14px; /* Reduced font size for readability */
+            line-height: 1.4; /* Adjust line height */
+            margin-bottom: 15px; /* Adjusted margin */
+            text-align: justify;
+            font-weight: bold;
+        }
+    
+        .about-me .download-cv {
+            padding: 10px 20px; /* Adjust padding */
+            font-size: 20px; /* Adjusted font size */
+            margin-top: 0px; /* Space above the button */
+            background-color: red; /* Button background color */
+            color: white; /* Button text color */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Round corners */
+            cursor: pointer; /* Change cursor to pointer */
+            text-align: center; /* Center text in the button */
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* General Body Styling */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        min-height: 100vh; /* Ensure it takes at least the full viewport height */
+        display: flex;
+        flex-direction: column; /* Stack header and content vertically */
+        background: black;
+        color: white;
+        cursor: default;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .gooey-cursor {
+        width: 35px; /* Reduced size for mobile */
+        height: 35px;
+    }
+
+    .gooey-cursor:hover {
+        transform: scale(1.3); /* Scale down hover effect */
+    }
+
+    header {
+        display: flex;
+        flex-direction: column; /* Stack header items vertically */
+        align-items: center; /* Center-aligns items */
+        padding: 10px;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to wrap to the next line */
+        justify-content: center; /* Centers the button links */
+        gap: 6px; /* Space between all buttons */
+        padding: 10px;
+    }
+    
+    .nav-links .link-button:nth-child(5),
+    .nav-links .link-button:nth-child(6) {
+        margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
+        margin-top: 13px;
+    }
+
+
+    .link-button {
+        flex: 1 1 5%; /* Allow buttons to take 45% of the width */
+        max-width: 130px; /* Set a maximum width for buttons on mobile */
+        padding: 5px; /* Adjust padding for mobile */
+        font-size: 1.1em; /* Smaller font size for mobile */
+        font-weight: bold;
+    }
+
+    .title h1 {
+        font-size: 3em; /* Reduced size for mobile */
+        color: red;
+        margin: 0px;
+        text-align: center; /* Centered for better layout */
+    }
+
+    .link-button.active {
+        color: red; /* Set active link color to red */
+        font-weight: bold;
+    }
+
+    .link-button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px; /* Reduced height for mobile */
+        bottom: -5px; /* Positioned slightly below the text */
+        left: 0;
+        background-color: #ff5722;
+        opacity: 0; /* Initially hidden */
+        transform: scaleX(0); /* Start with the line scaled down */
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    }
+
+    .link-button:hover::before {
+        opacity: 1; /* Make the underline visible on hover */
+        transform: scaleX(1); /* Expand the line */
+    }
+
+    .link-button:hover {
+        transform: translateY(-3px); /* Subtle lift effect */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+        flex: 1; /* Allow it to grow and take available space */
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        justify-content: flex-start; /* Center items */
+        width: 100%;
+        margin: 0; /* Remove side margin */
+        padding: 0 20px; /* Increased padding for better spacing */
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .profile-card {
+        position: relative; /* Make this position relative for overlapping */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack image and info card vertically */
+        align-items: center; /* Center items */
+        margin: 10; /* Remove right margin */
+    }
+
+    .image-container {
+        width: 250px; /* Increased width */
+        height: 320px; /* Increased height */
+        margin: 0 20 -20px -20; /* Negative margin for overlapping */
+        position: relative; /* Allow absolute positioning for the info card */
+        z-index: 0; /* Bring image to the front */
+        left: -15px;
+    }
+
+    .profile-image {
+        width: 100%; /* Full width of the container */
+        height: auto; /* Keep aspect ratio */
+        border-radius: 20px;
+    }
+
+    .info-card {
+        position: relative; /* Adjust positioning */
+        margin-top: -200px; /* Adjust this to position over the image */
+        left: 50px; /* Center the info card */
+        background-color: red;
+        color: white;
+        width: 90%; /* Full width on medium screens */
+        padding: 10px; /* Increased padding for better content spacing */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+        border-radius: 5px; /* Optional: Add rounding to corners */
+        z-index: 0;
+        max-height: 300px;
+        overflow: auto;
+    }
+
+    .about-me {
+        margin-left: 0; /* Remove left margin */
+        max-width: 100%; /* Ensure it uses full width */
+        padding: 0 10px; /* Add some padding */
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 60px;
+    }
+
+    .about-me h2 {
+        font-size: 2.5em; /* Reduced font size */
+        margin: 10px 0;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .about-me h1 {
+        font-size: 24px; /* Adjusted font size */
+        margin-bottom: 10px; /* Adjusted margin */
+        margin-top: 0px;
+        font-weight: bold;
+    }
+
+    .about-me p {
+        font-size: 16px; /* Increased font size for readability */
+        line-height: 1.6; /* Adjust line height */
+        margin-bottom: 15px; /* Adjusted margin */
+        text-align: justify;
+        font-weight: bold;
+    }
+
+    .about-me .download-cv {
+        padding: 12px 25px; /* Adjust padding */
+        font-size: 18px; /* Adjusted font size */
+        margin-top: 0px; /* Space above the button */
+        background-color: red; /* Button background color */
+        color: white; /* Button text color */
+        border: none; /* Remove default border */
+        border-radius: 5px; /* Round corners */
+        cursor: pointer; /* Change cursor to pointer */
+        text-align: center; /* Center text in the button */
+        font-weight: bold;
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 10px; /* Added padding for footer */
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+    
+    
