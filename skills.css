@@ -221,9 +221,6 @@ footer a:hover {
 @media (max-width: 480px) {
     body {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         height: auto; /* Ensure body takes the full height */
@@ -246,9 +243,6 @@ footer a:hover {
    /* Header Styling */
     header {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -315,9 +309,6 @@ footer a:hover {
 
     .skills-section {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         padding: 1vh; /* Reduced padding */
         text-align: center;
         flex: 1; /* Allow the section to expand */
@@ -352,9 +343,6 @@ footer a:hover {
 
     footer {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         padding: 5px; /* Add padding for footer */
         font-size: 0.9em; /* Adjust font size */
     }
@@ -368,9 +356,6 @@ footer a:hover {
 @media (min-width: 481px) and (max-width: 768px) {
     body {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         height: auto; /* Ensure body takes the full height */
@@ -393,9 +378,6 @@ footer a:hover {
    /* Header Styling */
     header {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -462,9 +444,6 @@ footer a:hover {
     
     .skills-section {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         padding: 2vh; /* Increased padding for better spacing */
         text-align: center;
         flex: 1; /* Allow the section to expand */
@@ -499,9 +478,6 @@ footer a:hover {
 
     footer {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         padding: 10px; /* Add padding for footer */
         font-size: 1em; /* Adjust font size */
     }
