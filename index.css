@@ -270,6 +270,10 @@ footer a:hover {
         padding: 0;
         overflow-x: hidden;
     }
+    
+    .gooey-cursor {
+        display: none;
+    }
 
     h2, h3, h4 {
         font-family: 'Montserrat', sans-serif;
