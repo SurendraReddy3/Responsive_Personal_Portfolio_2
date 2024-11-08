@@ -247,12 +247,12 @@ footer a:hover {
 @media (max-width: 480px) {
     /* General Styles */
     body {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         font-family: 'Roboto', sans-serif;
         margin: 0;
         height: auto; /* Ensure body takes the full height */
         display: flex;
         flex-direction: column; /* Stack header and content vertically */
-        background: black;
         color: white;
         cursor: default;
         padding: 0;
@@ -264,33 +264,10 @@ footer a:hover {
         font-family: 'Montserrat', sans-serif;
     }
 
-    /* Gooey Cursor */
-    .gooey-cursor {
-        position: fixed;
-        width: 6vw; /* Adjusted size for better visibility */
-        height: 6vw; /* Adjusted size for better visibility */
-        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
-        border-radius: 50%; /* Make it round */
-        pointer-events: none; /* Prevent interfering with other elements */
-        transition: transform 0.1s ease; /* Smooth transition */
-        filter: url(#gooey); /* Apply the gooey effect filter */
-        transform: scale(1);
-        z-index: 9999;
-    }
-
-    .gooey:hover {
-        transform: scale(1.5);
-    }
-
-    /* Define the gooey effect using SVG filter */
-    svg {
-        position: absolute;
-        width: 0;
-        height: 0;
-    }
-
+   
     /* Header Styling */
     header {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -358,6 +335,7 @@ footer a:hover {
 
     /* Projects Section */
     .projects-section {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         padding: 5px; /* Reduce padding */
     }
 
@@ -387,6 +365,7 @@ footer a:hover {
 
     /* Footer Styling */
     footer {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         padding: 0px; /* Increase padding for easier tap targets */
     }
 
@@ -399,12 +378,12 @@ footer a:hover {
 @media (min-width: 481px) and (max-width: 768px) {
     /* General Styles */
     body {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         font-family: 'Roboto', sans-serif;
         margin: 0;
         height: auto; /* Ensure body takes the full height */
         display: flex;
         flex-direction: column; /* Stack header and content vertically */
-        background: black;
         color: white;
         cursor: default;
         padding: 0;
@@ -416,33 +395,10 @@ footer a:hover {
         font-family: 'Montserrat', sans-serif;
     }
 
-    /* Gooey Cursor */
-    .gooey-cursor {
-        position: fixed;
-        width: 6vw; /* Adjusted size for better visibility */
-        height: 6vw; /* Adjusted size for better visibility */
-        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
-        border-radius: 50%; /* Make it round */
-        pointer-events: none; /* Prevent interfering with other elements */
-        transition: transform 0.1s ease; /* Smooth transition */
-        filter: url(#gooey); /* Apply the gooey effect filter */
-        transform: scale(1);
-        z-index: 9999;
-    }
-
-    .gooey:hover {
-        transform: scale(1.5);
-    }
-
-    /* Define the gooey effect using SVG filter */
-    svg {
-        position: absolute;
-        width: 0;
-        height: 0;
-    }
 
     /* Header Styling */
     header {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -509,6 +465,7 @@ footer a:hover {
 
     /* Projects Section */
     .projects-section {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         padding: 10px; /* Increase padding */
     }
 
@@ -538,6 +495,7 @@ footer a:hover {
 
     /* Footer Styling */
     footer {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         padding: 10px; /* Increase padding for easier tap targets */
     }
 
