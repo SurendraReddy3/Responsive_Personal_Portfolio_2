@@ -264,6 +264,9 @@ footer a:hover {
         font-family: 'Montserrat', sans-serif;
     }
 
+    .gooey-cursor {
+        display: none;
+    }
    
     /* Header Styling */
     header {
@@ -395,6 +398,9 @@ footer a:hover {
         font-family: 'Montserrat', sans-serif;
     }
 
+    .gooey-cursor {
+        display: none;
+    }
 
     /* Header Styling */
     header {
