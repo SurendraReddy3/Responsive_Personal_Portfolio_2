@@ -262,13 +262,13 @@ body {
     
         .title h1 {
             font-size: 3em; /* Reduced size for mobile */
-            color: red;
+            color: #4b9c4b;
             margin: 0px;
             text-align: center; /* Centered for better layout */
         }
     
         .link-button.active {
-            color: red; /* Set active link color to red */
+            color: #4b9c4b; /* Set active link color to red */
             font-weight: bold;
         }
     
@@ -279,7 +279,7 @@ body {
             height: 4px; /* Reduced height for mobile */
             bottom: -5px; /* Positioned slightly below the text */
             left: 0;
-            background-color: #ff5722;
+            background-color: #4b9c4b;
             opacity: 0; /* Initially hidden */
             transform: scaleX(0); /* Start with the line scaled down */
             transform-origin: center;
@@ -338,7 +338,7 @@ body {
             position: relative; /* Adjust positioning */
             margin-top: -190px; /* Adjust this to position over the image */
             left: 100px;
-            background-color: red;
+            background-color: #4b9c4b;
             color: white;
             width: 95%; /* Full width on mobile */
             padding: 0px; /* Reduced padding to decrease height */
@@ -386,7 +386,7 @@ body {
             padding: 10px 20px; /* Adjust padding */
             font-size: 20px; /* Adjusted font size */
             margin-top: 0px; /* Space above the button */
-            background-color: red; /* Button background color */
+            background-color: #4b9c4b; /* Button background color */
             color: white; /* Button text color */
             border: none; /* Remove default border */
             border-radius: 5px; /* Round corners */
@@ -456,13 +456,13 @@ body {
 
     .title h1 {
         font-size: 3em; /* Reduced size for mobile */
-        color: red;
+        color: #4b9c4b;
         margin: 0px;
         text-align: center; /* Centered for better layout */
     }
 
     .link-button.active {
-        color: red; /* Set active link color to red */
+        color: #4b9c4b; /* Set active link color to red */
         font-weight: bold;
     }
 
@@ -473,7 +473,7 @@ body {
         height: 4px; /* Reduced height for mobile */
         bottom: -5px; /* Positioned slightly below the text */
         left: 0;
-        background-color: #ff5722;
+        background-color: #4b9c4b;
         opacity: 0; /* Initially hidden */
         transform: scaleX(0); /* Start with the line scaled down */
         transform-origin: center;
@@ -531,7 +531,7 @@ body {
         position: relative; /* Adjust positioning */
         margin-top: -200px; /* Adjust this to position over the image */
         left: 50px; /* Center the info card */
-        background-color: red;
+        background-color: #4b9c4b;
         color: white;
         width: 90%; /* Full width on medium screens */
         padding: 10px; /* Increased padding for better content spacing */
@@ -579,7 +579,7 @@ body {
         padding: 12px 25px; /* Adjust padding */
         font-size: 18px; /* Adjusted font size */
         margin-top: 0px; /* Space above the button */
-        background-color: red; /* Button background color */
+        background-color: #4b9c4b; /* Button background color */
         color: white; /* Button text color */
         border: none; /* Remove default border */
         border-radius: 5px; /* Round corners */
