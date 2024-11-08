@@ -305,13 +305,16 @@ footer a:hover {
         margin-bottom: 20px;
     }
 
+    .certifications-section {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    }
+
     .certification-subsection h3 {
         font-size: 1.8rem;
     }
 
     /* Grid layout */
     .certifications-grid {
-        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
@@ -441,13 +444,16 @@ footer a:hover {
         margin-bottom: 20px;
     }
 
+    .certifications-section {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    }
+    
     .certification-subsection h3 {
         font-size: 1.8rem; /* Maintain similar size */
     }
 
     /* Grid layout */
     .certifications-grid {
-        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         display: grid;
         grid-template-columns: repeat(1fr); /* Two columns layout */
         gap: 20px;
