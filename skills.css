@@ -100,6 +100,10 @@ header {
 /* Skills Section and Footer styles unchanged */
 .skills-section {
     background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
     padding: 2vh; /* Relative padding */
     text-align: center;
     flex: 1; /* Allow the section to expand and take up available space */
