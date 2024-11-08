@@ -305,9 +305,12 @@ footer a:hover {
         display: none;
     }
 
-    /* Header Styling */
+     /* Header Styling */
     header {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -327,8 +330,7 @@ footer a:hover {
         margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
         margin-top: 13px;
     }
-
-
+    
     .link-button {
         flex: 1 1 5%; /* Allow buttons to take 45% of the width */
         max-width: 130px; /* Set a maximum width for buttons on mobile */
@@ -345,7 +347,7 @@ footer a:hover {
     }
 
     .link-button.active {
-        color: #4b9c4b; /* Set active link color to red */
+        color: #4b9c4b ; /* Set active link color to red */
         font-weight: bold;
     }
 
@@ -370,8 +372,9 @@ footer a:hover {
 
     .link-button:hover {
         transform: translateY(-3px); /* Subtle lift effect */
-        box-shadow: 0px 5px 10px #4b9c4b;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     }
+    
     /* Contact Section */
     .section-title {
         font-size: 2.5em;
@@ -468,9 +471,12 @@ footer a:hover {
         display: none;
     }
 
-    /* Header Styling */
+     /* Header Styling */
     header {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -490,8 +496,7 @@ footer a:hover {
         margin-left: 20px; /* Adds left margin to the 5th and 6th buttons only */
         margin-top: 13px;
     }
-
-
+    
     .link-button {
         flex: 1 1 5%; /* Allow buttons to take 45% of the width */
         max-width: 130px; /* Set a maximum width for buttons on mobile */
@@ -508,7 +513,7 @@ footer a:hover {
     }
 
     .link-button.active {
-        color: #4b9c4b; /* Set active link color to red */
+        color: #4b9c4b ; /* Set active link color to red */
         font-weight: bold;
     }
 
@@ -533,7 +538,7 @@ footer a:hover {
 
     .link-button:hover {
         transform: translateY(-3px); /* Subtle lift effect */
-        box-shadow: 0px 5px 10px #4b9c4b;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     }
 
     /* Contact Section */
