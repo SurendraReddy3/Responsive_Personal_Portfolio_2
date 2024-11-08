@@ -301,6 +301,10 @@ footer a:hover {
         font-family: 'Montserrat', sans-serif;
     }
 
+    .gooey-cursor {
+        display: none;
+    }
+
     /* Header Styling */
     header {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
@@ -458,6 +462,10 @@ footer a:hover {
 
     h2, h3, h4 {
         font-family: 'Montserrat', sans-serif;
+    }
+
+    .gooey-cursor {
+        display: none;
     }
 
     /* Header Styling */
