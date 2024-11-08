@@ -218,6 +218,9 @@ body {
         /* General Body Styling */
         body {
             background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             font-family: 'Roboto', sans-serif;
             margin: 0;
             min-height: 100vh; /* Ensure it takes at least the full viewport height */
@@ -235,6 +238,9 @@ body {
     
         header {
             background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column; /* Stack header items vertically */
             align-items: center; /* Center-aligns items */
@@ -302,6 +308,9 @@ body {
     
         .container {
             background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             flex: 1; /* Allow it to grow and take available space */
             display: flex;
             flex-direction: column; /* Stack items vertically */
@@ -401,6 +410,9 @@ body {
 
         footer {
             background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: white;
             text-align: center;
             padding: 0;
@@ -416,6 +428,9 @@ body {
     /* General Body Styling */
     body {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         min-height: 100vh; /* Ensure it takes at least the full viewport height */
@@ -433,6 +448,9 @@ body {
 
     header {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -500,6 +518,9 @@ body {
 
     .container {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         flex: 1; /* Allow it to grow and take available space */
         display: flex;
         flex-direction: column; /* Stack items vertically */
@@ -598,6 +619,9 @@ body {
 
     footer {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         color: white;
         text-align: center;
         padding: 10px; /* Added padding for footer */
