@@ -215,9 +215,6 @@ footer a:hover {
     /* General Styles */
     body {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         height: auto; /* Ensure body takes the full height */
@@ -236,10 +233,7 @@ footer a:hover {
    
     /* Header Styling */
     header {
-        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg)
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -312,9 +306,6 @@ footer a:hover {
 
     .certifications-section {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
     .certification-subsection h3 {
@@ -354,9 +345,6 @@ footer a:hover {
     /* Footer */
     footer {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         padding: 10px 0;
         font-size: 0.9em;
     }
@@ -366,9 +354,6 @@ footer a:hover {
     /* General Styles */
     body {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         height: auto; /* Ensure body takes the full height */
@@ -388,9 +373,6 @@ footer a:hover {
     /* Header Styling */
     header {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -463,9 +445,6 @@ footer a:hover {
 
     .certifications-section {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
     
     .certification-subsection h3 {
@@ -505,9 +484,6 @@ footer a:hover {
     /* Footer */
     footer {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         padding: 10px 0;
         font-size: 1em; /* Larger font size for footer */
     }
