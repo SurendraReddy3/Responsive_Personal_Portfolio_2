@@ -193,6 +193,7 @@ body {
         display: inline-block;
         transition: background-color 0.3s, transform 0.3s;
         font-weight: bold;
+        box-shadow: 0 0 20px #4b9c4b;
     }
 
     .about-me .download-cv:hover {
