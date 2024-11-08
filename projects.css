@@ -248,6 +248,9 @@ footer a:hover {
     /* General Styles */
     body {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         height: auto; /* Ensure body takes the full height */
@@ -270,6 +273,9 @@ footer a:hover {
    
     header {
             background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column; /* Stack header items vertically */
             align-items: center; /* Center-aligns items */
@@ -338,6 +344,9 @@ footer a:hover {
     /* Projects Section */
     .projects-section {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         padding: 5px; /* Reduce padding */
     }
 
@@ -368,6 +377,9 @@ footer a:hover {
     /* Footer Styling */
     footer {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         padding: 0px; /* Increase padding for easier tap targets */
     }
 
@@ -381,6 +393,9 @@ footer a:hover {
     /* General Styles */
     body {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         font-family: 'Roboto', sans-serif;
         margin: 0;
         height: auto; /* Ensure body takes the full height */
@@ -403,6 +418,9 @@ footer a:hover {
 
     header {
             background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column; /* Stack header items vertically */
             align-items: center; /* Center-aligns items */
@@ -471,6 +489,9 @@ footer a:hover {
     /* Projects Section */
     .projects-section {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         padding: 10px; /* Increase padding */
     }
 
@@ -501,6 +522,9 @@ footer a:hover {
     /* Footer Styling */
     footer {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         padding: 10px; /* Increase padding for easier tap targets */
     }
 
