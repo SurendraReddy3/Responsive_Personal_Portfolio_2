@@ -228,6 +228,10 @@ body {
             padding: 0;
             overflow-x: hidden;
         }
+
+        .gooey-cursor {
+            display: none;
+        }
     
         header {
             background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
@@ -421,6 +425,10 @@ body {
         cursor: default;
         padding: 0;
         overflow-x: hidden;
+    }
+
+    .gooey-cursor {
+        display: none;
     }
 
     header {
