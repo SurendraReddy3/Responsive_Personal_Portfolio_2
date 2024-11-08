@@ -278,9 +278,9 @@ footer a:hover {
     /* Gooey Cursor */
     .gooey-cursor {
         position: fixed;
-        width: 6vw; /* Adjusted size for better visibility */
-        height: 6vw; /* Adjusted size for better visibility */
-        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
+        width: 5vw; /* Adjusted size for better visibility */
+        height: 5vw; /* Adjusted size for better visibility */
+        background-color: #4b9c4b; /* Color of the gooey effect */
         border-radius: 50%; /* Make it round */
         pointer-events: none; /* Prevent interfering with other elements */
         transition: transform 0.1s ease; /* Smooth transition */
@@ -350,7 +350,7 @@ footer a:hover {
         height: 4px; /* Reduced height for mobile */
         bottom: -5px; /* Positioned slightly below the text */
         left: 0;
-        background-color: #ff5722;
+        background-color: #4b9c4b;
         opacity: 0; /* Initially hidden */
         transform: scaleX(0); /* Start with the line scaled down */
         transform-origin: center;
@@ -414,7 +414,7 @@ footer a:hover {
 
     /* Button Styling */
     .download-button {
-        background-color: red;
+        background-color: #4b9c4b;
         padding: 8px 8px; /* Adjusted padding */
         border: none;
         border-radius: 5px;
@@ -453,7 +453,7 @@ footer a:hover {
 
     .profile-pic img:hover {
         transform: scale(1.1);
-        box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
+        box-shadow: 0px 0px 20px white;
     }
 
     /* Social Media Links */
@@ -497,7 +497,7 @@ footer a:hover {
         color: #ff5722; /* Change color on hover */
         transform: scale(1.1); /* Scale effect for interaction */
         transition: transform 0.3s, color 0.3s; /* Smooth transition */
-        background-color: rgba(0, 0, 0, 0.5); /* Slight background on hover */
+        background-color: #4b9c4b; /* Slight background on hover */
         border-radius: 50%; /* Rounded effect */
     }
 
@@ -536,7 +536,7 @@ footer a:hover {
         position: fixed;
         width: 6vw; /* Adjusted size for better visibility */
         height: 6vw; /* Adjusted size for better visibility */
-        background-color: rgba(255, 0, 0, 0.8); /* Color of the gooey effect */
+        background-color: #4b9c4b; /* Color of the gooey effect */
         border-radius: 50%; /* Make it round */
         pointer-events: none; /* Prevent interfering with other elements */
         transition: transform 0.1s ease; /* Smooth transition */
@@ -607,7 +607,7 @@ footer a:hover {
         height: 4px; /* Reduced height for mobile */
         bottom: -5px; /* Positioned slightly below the text */
         left: 0;
-        background-color: #ff5722;
+        background-color: #4b9c4b;
         opacity: 0; /* Initially hidden */
         transform: scaleX(0); /* Start with the line scaled down */
         transform-origin: center;
@@ -621,7 +621,7 @@ footer a:hover {
 
     .link-button:hover {
         transform: translateY(-3px); /* Subtle lift effect */
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 5px 10px white;
     }
 
     /* Content and Text Styling */
@@ -671,7 +671,7 @@ footer a:hover {
 
     /* Button Styling */
     .download-button {
-        background-color: red;
+        background-color: #4b9c4b;
         padding: 10px 10px; /* Adjusted padding */
         border: none;
         border-radius: 5px;
@@ -754,7 +754,7 @@ footer a:hover {
         color: #ff5722; /* Change color on hover */
         transform: scale(1.1); /* Scale effect for interaction */
         transition: transform 0.3s, color 0.3s; /* Smooth transition */
-        background-color: rgba(0, 0, 0, 0.5); /* Slight background on hover */
+        background-color: #4b9c4b; /* Slight background on hover */
         border-radius: 50%; /* Rounded effect */
     }
 
