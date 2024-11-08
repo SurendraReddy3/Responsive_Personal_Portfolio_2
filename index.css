@@ -259,12 +259,12 @@ footer a:hover {
 @media (max-width: 480px) {
     /* General Body Styling */  
     body {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         font-family: 'Roboto', sans-serif;
         margin: 0;
         height: auto; /* Ensure body takes the full height */
         display: flex;
         flex-direction: column; /* Stack header and content vertically */
-        background: black;
         color: white;
         cursor: default;
         padding: 0;
@@ -302,6 +302,7 @@ footer a:hover {
 
     /* Header Styling */
     header {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -368,6 +369,7 @@ footer a:hover {
 
     /* Content and Text Styling */
     .content-container {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         flex: 1; /* Allow it to grow and take available space */
         display: flex;
         flex-direction: column; /* Stack content vertically */
@@ -445,7 +447,7 @@ footer a:hover {
         max-width: 300px; /* Adjusted max width */
         border-radius: 50%; /* Make it circular */
         margin-bottom: 20px; /* Space between image and links */
-        box-shadow: 0 0 10px rgba(236, 236, 236, 0.958);
+        box-shadow: 0 0 30px white;
         transition: transform 0.8s, box-shadow 0.3s;
     }
 
@@ -500,9 +502,9 @@ footer a:hover {
     }
 
     footer {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         text-align: center; /* Center the footer text */
         padding: 10px 0; /* Padding for footer */
-        background-color: rgba(0, 0, 0, 0.8); /* Footer background */
         color: white; /* Footer text color */
         width: 100%; /* Full width */
         position: relative; /* Default positioning */
@@ -513,12 +515,12 @@ footer a:hover {
 @media (min-width: 481px) and (max-width: 768px) {
     /* General Body Styling */  
     body {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         font-family: 'Roboto', sans-serif;
         margin: 0;
         height: auto; /* Ensure body takes the full height */
         display: flex;
         flex-direction: column; /* Stack header and content vertically */
-        background: black;
         color: white;
         cursor: default;
         padding: 0;
@@ -556,6 +558,7 @@ footer a:hover {
 
     /* Header Styling */
     header {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -623,6 +626,7 @@ footer a:hover {
 
     /* Content and Text Styling */
     .content-container {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         flex: 1; /* Allow it to grow and take available space */
         display: flex;
         flex-direction: column; /* Stack content vertically */
@@ -700,7 +704,7 @@ footer a:hover {
         max-width: 250px; /* Adjusted max width */
         border-radius: 50%; /* Make it circular */
         margin-bottom: 15px; /* Space between image and links */
-        box-shadow: 0 0 10px rgba(194, 11, 175, 0.896);
+        box-shadow: 0 0 30px white;
         transition: transform 0.8s, box-shadow 0.3s;
     }
 
@@ -755,9 +759,9 @@ footer a:hover {
     }
 
     footer {
+        background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
         text-align: center; /* Center the footer text */
         padding: 15px 0; /* Padding for footer */
-        background-color: rgba(0, 0, 0, 0.8); /* Footer background */
         color: white; /* Footer text color */
         width: 100%; /* Full width */
         position: relative; /* Default positioning */
