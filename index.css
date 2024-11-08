@@ -285,6 +285,9 @@ footer a:hover {
     /* Header Styling */
     header {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -352,6 +355,9 @@ footer a:hover {
     /* Content and Text Styling */
     .content-container {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         flex: 1; /* Allow it to grow and take available space */
         display: flex;
         flex-direction: column; /* Stack content vertically */
@@ -485,6 +491,9 @@ footer a:hover {
 
     footer {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         text-align: center; /* Center the footer text */
         padding: 10px 0; /* Padding for footer */
         color: white; /* Footer text color */
@@ -520,34 +529,12 @@ footer a:hover {
         font-family: 'Montserrat', sans-serif;
     }
 
-    /* Gooey Cursor */
-    .gooey-cursor {
-        position: fixed;
-        width: 6vw; /* Adjusted size for better visibility */
-        height: 6vw; /* Adjusted size for better visibility */
-        background-color: #4b9c4b; /* Color of the gooey effect */
-        border-radius: 50%; /* Make it round */
-        pointer-events: none; /* Prevent interfering with other elements */
-        transition: transform 0.1s ease; /* Smooth transition */
-        filter: url(#gooey); /* Apply the gooey effect filter */
-        transform: scale(1);
-        z-index: 9999;
-    }
-
-    .gooey:hover {
-        transform: scale(1.5);
-    }
-
-    /* Define the gooey effect using SVG filter */
-    svg {
-        position: absolute;
-        width: 0;
-        height: 0;
-    }
-
     /* Header Styling */
     header {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column; /* Stack header items vertically */
         align-items: center; /* Center-aligns items */
@@ -616,6 +603,9 @@ footer a:hover {
     /* Content and Text Styling */
     .content-container {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         flex: 1; /* Allow it to grow and take available space */
         display: flex;
         flex-direction: column; /* Stack content vertically */
@@ -749,6 +739,9 @@ footer a:hover {
 
     footer {
         background-image: url(assets/jeremy-bishop-G9i_plbfDgk-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         text-align: center; /* Center the footer text */
         padding: 15px 0; /* Padding for footer */
         color: white; /* Footer text color */
