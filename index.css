@@ -132,7 +132,7 @@ header {
 
 .name h1 {
     animation: gradient-animation 8s infinite linear;
-    background: linear-gradient(90deg, #ff0000, blue, #00ff00, green, #ff00ff);
+    background: linear-gradient(90deg, #4b9c4b, #0066cc, #00ff00, #3399ff, #ff00ff);
     background-size: 300%;
     background-clip: text;
     -webkit-background-clip: text;
