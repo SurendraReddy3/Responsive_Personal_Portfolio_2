@@ -145,7 +145,7 @@ body {
         left: 230px;
         background-color: #4b9c4b;
         color: white;
-        width: 80%;
+        width: 83%;
         box-sizing: border-box;
         text-align: left;
         border-radius: 10px;
@@ -355,7 +355,7 @@ body {
         }
 
         .info-card p {
-            font-size: 1em;
+            font-size: 0.8em;
         }
     
         .about-me {
@@ -553,6 +553,10 @@ body {
         z-index: 0;
         max-height: 300px;
         overflow: auto;
+    }
+
+    .info-card p {
+        font-size: 0.8em;
     }
 
     .about-me {
