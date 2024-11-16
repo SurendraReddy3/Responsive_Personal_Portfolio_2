@@ -1,7 +1,7 @@
 # Responsive Personal Portfolio
 
 ### Welcome to my portfolio! This project showcases my skills, projects, and certifications as a Python Full Stack Developer.   
-### [Watch Live](https://surendrareddy3.github.io/Responsive-Personal-Portfolio/)
+### [Watch Live](https://surendrareddy3.github.io/Responsive_Personal_Portfolio_2/)
 
 ---
 
